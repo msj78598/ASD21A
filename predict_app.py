@@ -15,10 +15,12 @@ from sklearn.metrics import (
 )
 
 # مسارات المشروع كما زوّدتني
-PROJECT_DIR = Path(r"C:\Users\78598\Documents\asd21")
-MODELS_DIR  = PROJECT_DIR / "models"
-RESULTS_DIR = PROJECT_DIR / "results"
+# مسارات المشروع (نسبيّة للمستودع/التطبيق)
+REPO_DIR   = Path(__file__).resolve().parent
+MODELS_DIR = REPO_DIR / "models"
+RESULTS_DIR = REPO_DIR / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
 
 # ========== أدوات مساعدة ==========
 def load_excel_biggest_sheet(path_or_buf):
